@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Click Counter</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    #clickButton {
+        background-color: #3d668d;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 20px;
+        cursor: pointer;
+        border-radius: 12px;
+        transition: background-color 0.3s ease;
+    }
+
+    #clickButton:hover {
+        background-color: #367a8b;
+    }
+
+    #displayArea {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        display: inline-block;
+    }
+</style>
+</head>
+<body>
+    <div>
+        <button id="clickButton" onclick="incrementCount()">Click me</button>
+        <div id="displayArea">Click the button to see the count</div>
+    </div>
+
+    <script>
+        // Initialize count variable
+        var count = 0;
+
+        function incrementCount() {
+            // Increment count
+            count++;
+
+            // Update display area with new count
+            var displayArea = document.getElementById("displayArea");
+            displayArea.textContent = "Button clicked " + count + " times";
+        }
+    </script>
+</body>
+</html>

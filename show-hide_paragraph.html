@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Show/Hide Paragraph</title>
+<style>
+    #paragraph {
+        display: block;
+    }
+    #toggleButton {
+        background-color: #8a3d79;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        padding: 10px 20px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 12px;
+        transition: background-color 0.3s ease;
+    }
+</style>
+</head>
+<body>
+    <p id="paragraph">Paragraph of text.</p>
+    <button id="toggleButton" onclick="toggleParagraph()">Hide</button>
+
+    <script>
+        function toggleParagraph() {
+            var paragraph = document.getElementById("paragraph");
+            var button = document.getElementById("toggleButton");
+
+            if (paragraph.style.display === "none") {
+                paragraph.style.display = "block";
+                button.textContent = "Hide";
+            } else {
+                paragraph.style.display = "none";
+                button.textContent = "Show";
+            }
+        }
+    </script>
+</body>
+</html>

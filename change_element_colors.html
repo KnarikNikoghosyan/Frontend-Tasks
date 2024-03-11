@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Item Color Change</title>
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        display: grid;
+        place-items: center;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+        grid-gap: 10px;
+    }
+
+    li {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        background-color: #4CAF50;
+        color: white;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+</head>
+<body>
+    <ul>
+        <li onmouseover="changeColor(this)" onmouseout="resetColor(this)">1</li>
+        <li onmouseover="changeColor(this)" onmouseout="resetColor(this)">2</li>
+        <li onmouseover="changeColor(this)" onmouseout="resetColor(this)">3</li>
+        <li onmouseover="changeColor(this)" onmouseout="resetColor(this)">4</li>
+        <li onmouseover="changeColor(this)" onmouseout="resetColor(this)">5</li>
+    </ul>
+
+    <script>
+        function changeColor(element) {
+            element.originalColor = element.style.backgroundColor;
+            element.style.backgroundColor = "#45a049";
+        }
+
+        function resetColor(element) {
+            element.style.backgroundColor = element.originalColor || "#4CAF50";
+        }
+    </script>
+</body>
+</html>

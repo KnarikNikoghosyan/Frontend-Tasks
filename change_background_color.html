@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Change Background Color</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  #container {
+    text-align: center;
+  }
+
+  .colorButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    margin: 5px;
+  }
+
+  #colorButtons {
+    margin-top: 20px;
+  }
+
+  #colorButtons .colorButton {
+    transition: background-color 0.3s ease;
+  }
+
+  #colorButtons .colorButton:hover {
+    opacity: 0.8;
+  }
+
+  #output {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #666;
+  }
+
+  .redButton {
+    background-color: #ff6666;
+    color: white;
+  }
+
+  .blueButton {
+    background-color: #6699ff;
+    color: white;
+  }
+
+  .greenButton {
+    background-color: #66cc99;
+    color: white;
+  }
+
+  .yellowButton {
+    background-color: #ffff66;
+    color: #333;
+  }
+
+  .purpleButton {
+    background-color: #9966cc;
+    color: white;
+  }
+</style>
+</head>
+<body>
+
+<div id="container">
+  <div id="colorButtons">
+    <button class="colorButton redButton" onclick="changeColor('#ff6666')">Red</button>
+    <button class="colorButton blueButton" onclick="changeColor('#6699ff')">Blue</button>
+    <button class="colorButton greenButton" onclick="changeColor('#66cc99')">Green</button>
+    <button class="colorButton yellowButton" onclick="changeColor('#ffff66')">Yellow</button>
+    <button class="colorButton purpleButton" onclick="changeColor('#9966cc')">Purple</button>
+  </div>
+</div>
+
+<script>
+  function changeColor(color) {
+    document.body.style.backgroundColor = color;
+  }
+</script>
+
+</body>
+</html>

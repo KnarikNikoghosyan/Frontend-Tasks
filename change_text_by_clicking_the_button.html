@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Changing Text</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  #container {
+    text-align: center;
+  }
+
+  h2 {
+    color: #333;
+  }
+
+  #inp {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #e9e2a0;
+    margin-bottom: 20px;
+  }
+
+  #btn {
+    padding: 10px 20px;
+    background-color: #e77e55;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+  }
+
+  #btn:hover {
+    background-color: #ecb896;
+  }
+
+  #para1 {
+    color: #150324;
+    font-size: 18px;
+  }
+</style>
+</head>
+<body>
+
+<div id="container">
+  <h2>Changing Text with Shapes and Colors</h2>
+  <p id="upper">The text of the below elements will be replaced by the text you enter in the input bar once you click the button.</p>
+  <input type="text" id="inp"> <br> <br>
+  <button id="btn" onclick="changeText()">Click to change the text</button>
+  <p id="para1">This is the initial text of Para1.</p>
+</div>
+
+<script>
+  function changeText() {
+    var inp = document.getElementById("inp");
+    var enteredText = inp.value;
+    var para1 = document.getElementById("para1");
+    para1.innerHTML = enteredText + ", This text is changed.";
+  }
+</script>
+
+</body>
+</html>

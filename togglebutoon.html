@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toggle Button</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  #toggleButton {
+    padding: 20px 40px;
+    background-color: #f0f322;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    font-size: 24px;
+  }
+
+  #toggleButton:hover {
+    background-color: #e9e514;
+  }
+</style>
+</head>
+<body>
+
+<button id="toggleButton">Hello</button>
+
+<script>
+  var button = document.getElementById("toggleButton");
+  var isHello = true;
+
+  button.addEventListener("click", function() {
+    if (isHello) {
+      button.textContent = "Goodbye";
+      button.style.backgroundColor = "#ff6666";
+    } else {
+      button.textContent = "Hello";
+      button.style.backgroundColor = "#e9e514";
+    }
+    isHello = !isHello;
+  });
+</script>
+
+</body>
+</html>

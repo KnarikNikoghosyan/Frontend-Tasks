@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Display Input Content</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  #container {
+    text-align: center;
+  }
+
+  input[type="text"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 16px;
+    width: 300px;
+  }
+
+  #displayButton {
+    padding: 10px 20px;
+    background-color: #531abd;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+
+  #displayButton:hover {
+    background-color: #8164c5;
+  }
+
+  #output {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #666;
+  }
+</style>
+</head>
+<body>
+
+<div id="container">
+  <input type="text" id="inputField" placeholder="Enter text here">
+  <br>
+  <button id="displayButton">Display</button>
+  <p id="output"></p>
+</div>
+
+<script>
+  var displayButton = document.getElementById("displayButton");
+  var output = document.getElementById("output");
+
+  displayButton.addEventListener("click", function() {
+    var inputField = document.getElementById("inputField");
+    var inputValue = inputField.value;
+    output.textContent = inputValue;
+  });
+</script>
+
+</body>
+</html>
